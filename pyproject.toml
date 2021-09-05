@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "colour"
+version = "0.1.0"
+description = ""
+authors = ["Stéphan Taljaard <steptaljaard@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+colorio = "^0.8.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.8b0"
+isort = "^5.9.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+
+[tool.isort]
+profile = "black"
+src_paths = ["flows"]
+line_length = 120
+skip_gitignore = true
+multi_line_output = 3
+atomic = true
